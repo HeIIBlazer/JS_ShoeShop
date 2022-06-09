@@ -1,0 +1,7 @@
+/build
+/dist
+/nbproject
+/test
+src/conf/
+build.xml
+/.vscode

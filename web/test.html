@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet/less" type="text/css" href="components/upload.scss" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <title>Shoeger</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="#"><img src="Images/shoeger.png" alt="logo"></a>
+        </div>
+        <ul>
+            <li id="admin-panel"><a href="#">Панель админа</a></li>
+            <li id="buy-model"><a href="#">Купить модель</a></li>
+            <div id="dropdown-model" class="dropdown">
+                <button class="dropbtn">Модель</button>
+                <div class="dropdown-content">
+                    <a id="create-model" href="#">Добавить модель</a>
+                    <a id="edit-model" href="#">Изменить модель</a>
+                </div>
+            </div>
+            <div id="dropdown-user" class="dropdown">
+                <button class="dropbtn">Пользователь</button>
+                <div class="dropdown-content">
+                    <a id="create-user" href="#">Добавить пользователя</a>
+                    <a id="edit-user" href="#">Изменить пользователя</a>
+                </div>
+            </div>
+        </ul>
+    </header>
+    <p id="info" class="text-info">&nbsp;</p>
+    <main id="content">
+        <div class="shoe-edit-container">
+            <div class="top-content">
+                <span class="model-edit-title">Изменение обуви</span>
+            </div>
+            <div class="mid-content">
+                <label for="list models">Список моделей:</label>
+                <select name="list models" id="list-models">
+
+                </select>
+                <select name="listPictures" id="list-pictures">
+                
+                </select>
+                <div class="wrap-input100 validate-input" data-validate="Enter name">
+                    <input class="input100" type="text" id="model-name" name="modelName" placeholder="Model name">
+                </div>
+                <div class="wrap-input100 validate-input" data-validate="Enter firm">
+                    <input class="input100" type="text" id="model-firm" name="modelFirm" placeholder="Model firm">
+                </div>
+                <div class="wrap-input100 validate-input" data-validate="Enter size">
+                    <input class="input100" type="number" maxlength="2" id="model-size" name="modelSize" placeholder="Model size">
+                </div>
+                <div class="wrap-input100 validate-input" data-validate="Enter price">
+                    <input class="input100" type="number" pattern=".{.2}" id="model-price" name="price" placeholder="Price">
+                </div>
+                <div class="wrap-input100 validate-input" data-validate="Enter amount">
+                    <input class="input100" type="number" id="model-amount" min="1" max="50" name="amount" placeholder="Amount">
+                </div>
+                <div class="container-login100-form-btn">
+                    <button class="login100-form-btn" type="submit" id="submit-edit-model">Изменить</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>Dzjubenko 2022</footer>
+    <!-- <script type="module" src="js/index.js"></script> -->
+    <script>
+        const addingShoe = document.getElementById('adding-shoe');
+        const addFile = document.getElementById('add-file');
+        const addModel = document.getElementById('add-model');
+        addingShoe.style.opacity = '0.5';
+        addFile.style.cursor = 'not-allowed';
+        addModel.style.cursor = 'not-allowed';
+        // insert file name into input
+        const inputTag = document.getElementById("inputTag");
+        inputTag.addEventListener('change', (e) =>{
+            let inputImage = document.querySelector("input[type=file]").files[0];
+            const imagePathName = document.getElementById('imagePathName');
+            const imageName = document.getElementById('description');
+            const uploadContent = document.getElementById('upload-content');
+            const selectedFile = document.getElementById('selected-file');
+            imagePathName.style.display = 'unset';
+            imageName.style.display = 'unset';
+            imagePathName.value = inputImage.name;
+            uploadContent.style.height = '660px';
+            selectedFile.style.marginTop = '30px';
+
+            // to show image on screen
+            // image.src = URL.createObjectURL(e.target.files[0]);
+            // const file = document.getElementById('inputTag');
+            // if(file.files.length > 0) {
+            //     for (let i = 0; i <= file.files.length - 1; i++) {
+            //         const fileSize = file.files.item(i).size;
+            //     }
+            // }
+        });
+        const uploadForm = document.getElementById("uploadForm");
+        uploadForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            body[0].style.backgroundColor = 'white'
+            uploadModule.uploadPicture();
+            viewModule.showCreateModel();
+        });
+    </script>
+</body>
+
+</html>
