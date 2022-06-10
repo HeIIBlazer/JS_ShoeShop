@@ -644,21 +644,16 @@ class ViewModule {
         });
 
     }
-    showUploadImage() {
+        showUploadImage() {
         document.getElementById('info').innerHTML = '';
         document.getElementById('info').style.opacity = '0';
         const content = document.getElementById('content');
         content.innerHTML = 
         `<div id="adding-shoe-upload" class="shoe-add-container">
             <div class="shoe-info-side">
-            <div class="registration-heading">
-                <svg xmlns="http://www.w3.org/2000/svg">
-                    <filter id="motion-blur-filter" filterUnits="userSpaceOnUse">
-                        <feGaussianBlur stdDeviation="100 0"></feGaussianBlur>
-                    </filter>
-                </svg>
-                <h2 filter-content="S">ADD USER</h2>
-            </div>
+                <div id="topContent" class="top-content">
+                    <span class="container-title">MODEL ADDING</span>
+                </div>
                 <div class="mid-content">
                     <div class="wrap-input100 validate-input" data-validate="Enter name">
                         <input class="input100" type="text" id="model-name" name="modelName" placeholder="Model name">
@@ -676,7 +671,7 @@ class ViewModule {
                         <input class="input100" type="number" id="model-amount" min="1" max="50" name="amount" placeholder="Amount">
                     </div>
                     <div class="container-login100-form-btn">
-                        <button class="file-form-btn" id="add-file">ADD IMAGE</button>
+                        <button class="file-form-btn" id="add-file">UPLOAD IMAGE</button>
                         <button class="login100-form-btn" id="add-model">ADD</button>
                     </div>
                 </div>
@@ -690,11 +685,11 @@ class ViewModule {
                         <img src="Images/upload.png" id="backBtn" alt="upload">
                     </div>
                     <div class="after-img">
-                        <p>UPLOADING IMAGES</p>
+                        <p>UPLOADING IMAGE</p>
                     </div>
                 </div>
                 <div class="mid-content">
-                    <label for="forImg">SELECT IMAGE</label>
+                    <label for="forImg">SELECT FILE</label>
                     <label name="forImg" class="download-img">
                         <input type="file" id="inputTag" name="inputTag"> <br>
                     </label>
@@ -702,7 +697,7 @@ class ViewModule {
                         <input id="imagePathName" name="imagePathName" readonly/>
                     </div>
                     <div class="add-file-container">
-                        <button type="submit" id="submit-file">UPLOAD IMAGE</button>
+                        <button type="submit" id="submit-file">ADD IMAGE</button>
                     </div>
                 </div>
             </div>

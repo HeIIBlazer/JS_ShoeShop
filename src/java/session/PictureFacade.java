@@ -12,7 +12,7 @@ import javax.persistence.PersistenceContext;
 @Stateless
 public class PictureFacade extends AbstractFacade<Picture> {
 
-    @PersistenceContext(unitName = "JSShoeShopPU")
+    @PersistenceContext(unitName = "JS_ShoeShopPU")
     private EntityManager em;
 
     @Override

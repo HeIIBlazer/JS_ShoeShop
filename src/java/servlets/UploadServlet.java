@@ -43,7 +43,7 @@ import session.PictureFacade;
 public class UploadServlet extends HttpServlet {
     @EJB private PictureFacade pictureFacade;
     @EJB private ModelFacade modelFacade;
-    private final String imagesFolder = "G:\\Games\\Study\\Java\\Images\\upload"; // MY PATH TO FILE AT HOME
+    private final String imagesFolder = "D:\\JPTV20\\Java\\JS_ShoeShop\\web\\Images\\upload"; // MY PATH TO FILE AT HOME
     private final String imagesFolderSchool = "G:\\Games\\Study\\Java"; // MY PATH TO FILE AT SCHOOL
     private final String uploadedFolder = "Images\\upload\\";
     /**
