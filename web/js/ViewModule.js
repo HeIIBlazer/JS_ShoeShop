@@ -317,7 +317,7 @@ class ViewModule {
                     <input class="input100" type="number" id="model-amount" min="1" max="50" name="amount" placeholder="Amount">
                 </div>
                 <div class="container-login100-form-btn">
-                    <button class="login100-form-btn" type="submit" id="submit-edit-model">Изменить</button>
+                    <button class="login100-form-btn" type="submit" id="submit-edit-model">SAVE CHANGES</button>
                 </div>
             </div>
         </div>`;
@@ -371,7 +371,7 @@ class ViewModule {
 
                 </select>
                 <div class="wrap-input100 validate-input" data-validate="Enter first name">
-                    <input class="input100" type="text" id="user-first-name" name="user-firstNamer" placeholder="First name">
+                    <input class="input100" type="text" id="user-first-name" name="user-firstName" placeholder="First name">
                 </div>
                 <div class="wrap-input100 validate-input" data-validate="Enter last name">
                     <input class="input100" type="text" id="user-last-name" name="user-lastName" placeholder="Last name">

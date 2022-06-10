@@ -135,22 +135,23 @@ header ul li {
     display: none;
 }
 #info {
-    width: 1000px;
+    width: 100%;
     height: 45px;
-    /* background-color: rgba(255, 255, 255, 0.63); */
+    background-color: rgba(253, 211, 133, 0.808);
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 120px;
-    left: 0;
-    margin: 0 auto;
+    top: 87px;
     opacity: 0;
-    z-index: 9999;
+    z-index: 99;
+}
+.text-info {
     text-align: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: bold;
     font-size: 22px;
+    color: black;
 }
 #content {
     width: 85%;
@@ -772,7 +773,7 @@ button {
     transform: scale(1.05);
     border-radius: 15px;
     border: none;
-    background-color: rgb(123, 246, 255);
+    background-color: rgb(255, 174, 0);
     box-shadow: 0 0 30px 1px rgba(102, 102, 102, 0.685);
 }
 #collapseExample {

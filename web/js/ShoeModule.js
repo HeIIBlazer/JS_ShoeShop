@@ -62,7 +62,7 @@ class ShoeModule {
                         modelSelect.options.length = 0;
                         let option = null;
                         option = document.createElement('option');
-                        option.text = "-Выберите модель-";
+                        option.text = "-CHOOSE MODEL-";
                         option.value = '';
                         modelSelect.add(option);
                         for (let i = 0; i < response.options.length; i++) {
